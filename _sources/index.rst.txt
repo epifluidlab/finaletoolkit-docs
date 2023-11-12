@@ -20,7 +20,6 @@ Welcome to FinaleTools's documentation!
    cli
    api
    releases
-   GitHub <https://github.com/epifluidlab/FinaleTools>
 
 Indices and tables
 ==================
