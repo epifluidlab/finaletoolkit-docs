@@ -10,9 +10,6 @@ User Guide
    features
    installation
    structure
-<<<<<<< HEAD
    intersectpolicy
-=======
->>>>>>> 5bc1693cc16002a3ad9a25850990fb554a0c843b
    quickstart
    help

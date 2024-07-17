@@ -3,10 +3,5 @@ CLI
 =========================================
 
 .. argparse::
-<<<<<<< HEAD
    :ref: finaletoolkit.cli.main_cli.main_cli_parser
-=======
-   :module: finaletoolkit.cli
-   :func: main_cli_parser
->>>>>>> 5bc1693cc16002a3ad9a25850990fb554a0c843b
    :prog: finaletoolkit

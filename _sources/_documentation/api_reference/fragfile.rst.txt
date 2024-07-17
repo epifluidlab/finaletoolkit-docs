@@ -3,7 +3,6 @@ Frag File Utilities
 
 .. autofunction:: finaletoolkit.utils.filter_bam
 
-<<<<<<< HEAD
 .. autofunction:: finaletoolkit.utils.agg_bw
 
 .. autofunction:: finaletoolkit.utils.chrom_sizes_to_list
@@ -17,8 +16,3 @@ Frag File Utilities
 .. autofunction:: finaletoolkit.utils.low_quality_read_pairs
 
 .. autofunction:: finaletoolkit.utils.overlaps
-=======
-.. autofunction:: finaletoolkit.utils.genome2list
-
-.. autofunction:: finaletoolkit.utils.agg_bw
->>>>>>> 5bc1693cc16002a3ad9a25850990fb554a0c843b
