@@ -21,10 +21,16 @@ Documentation
 .. toctree::
    :maxdepth: 2
    
+<<<<<<< HEAD
    documentation/index
    documentation/user_guide/index
    documentation/cli_reference/index
    documentation/api_reference/index
+=======
+   _documentation/user_guide/index
+   _documentation/cli_reference/index
+   _documentation/api_reference/index
+>>>>>>> 5bc1693cc16002a3ad9a25850990fb554a0c843b
    
 -----------------
 Citations
@@ -32,6 +38,7 @@ Citations
 
 If FinaleToolkit is integral to a scientific publication, please cite it. A paper describing FinaleToolkit has been written. Here is a ready-made BibTeX entry::
 
+<<<<<<< HEAD
     @article {Li2024.05.29.596414,
 	author = {Li, James W. and Bandaru, Ravi and Liu, Yaping},
 	title = {FinaleToolkit: Accelerating Cell-Free DNA Fragmentation Analysis with a High-Speed Computational Toolkit},
@@ -46,6 +53,12 @@ If FinaleToolkit is integral to a scientific publication, please cite it. A pape
     }
 
 
+=======
+    @article{
+    COMING SOON
+    }
+
+>>>>>>> 5bc1693cc16002a3ad9a25850990fb554a0c843b
 -----------------
 Contact
 -----------------
@@ -63,4 +76,8 @@ Contact
 License
 -----------------
 
+<<<<<<< HEAD
 Please refer to the `MIT license <https://github.com/epifluidlab/FinaleToolkit/blob/main/LICENSE>`_.
+=======
+For academic research, please refer to MIT license. For commerical usage, please contact the authors.
+>>>>>>> 5bc1693cc16002a3ad9a25850990fb554a0c843b
