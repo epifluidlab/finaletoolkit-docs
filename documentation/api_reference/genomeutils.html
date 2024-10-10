@@ -382,7 +382,7 @@ document.write(`
 <h1>Genome Utilities<a class="headerlink" href="#genome-utilities" title="Permalink to this heading">#</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="finaletoolkit.genome.GenomeGaps">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">finaletoolkit.genome.</span></span><span class="sig-name descname"><span class="pre">GenomeGaps</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gaps_bed</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Path</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#finaletoolkit.genome.GenomeGaps" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">finaletoolkit.genome.</span></span><span class="sig-name descname"><span class="pre">GenomeGaps</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gaps_bed</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">PathLike</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#finaletoolkit.genome.GenomeGaps" title="Permalink to this definition">#</a></dt>
 <dd><p>Reads telomere, centromere, and short_arm intervals from a bed file
 or generates these intervals from UCSC gap and centromere tracks for
 hg19 and hg38.</p>
@@ -505,12 +505,12 @@ synonymous with the GRCh38 reference genome.
 
 <dl class="py method">
 <dt class="sig sig-object py" id="finaletoolkit.genome.GenomeGaps.to_bed">
-<span class="sig-name descname"><span class="pre">to_bed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">output_file</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#finaletoolkit.genome.GenomeGaps.to_bed" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">to_bed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">output_file</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">PathLike</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#finaletoolkit.genome.GenomeGaps.to_bed" title="Permalink to this definition">#</a></dt>
 <dd><p>Prints gap intervals in GenomeGaps to a BED4 file where the name
 is the type of gap interval.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>output_file</strong> (<em>str</em>) – File to write to. Optionally gzipped. If output_file == ‘-‘,
+<dd class="field-odd"><p><strong>output_file</strong> (<em>str</em><em> or </em><em>path</em>) – File to write to. Optionally gzipped. If output_file == ‘-‘,
 results will be writted to stdout.</p>
 </dd>
 </dl>
@@ -606,37 +606,37 @@ acrocentric chromosome.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="finaletoolkit.genome.ucsc_hg19_gap_bed">
-<span class="sig-prename descclassname"><span class="pre">finaletoolkit.genome.</span></span><span class="sig-name descname"><span class="pre">ucsc_hg19_gap_bed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">output_file</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#finaletoolkit.genome.ucsc_hg19_gap_bed" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">finaletoolkit.genome.</span></span><span class="sig-name descname"><span class="pre">ucsc_hg19_gap_bed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">output_file</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">PathLike</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#finaletoolkit.genome.ucsc_hg19_gap_bed" title="Permalink to this definition">#</a></dt>
 <dd><p>Creates BED4 of centromeres, telomeres, and short arms for the UCSC
 hg19 reference sequence.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>output_file</strong> (<em>str</em>) – Output path</p>
+<dd class="field-odd"><p><strong>output_file</strong> (<em>str</em><em> or </em><em>path</em>) – Output path</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="finaletoolkit.genome.b37_gap_bed">
-<span class="sig-prename descclassname"><span class="pre">finaletoolkit.genome.</span></span><span class="sig-name descname"><span class="pre">b37_gap_bed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">output_file</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#finaletoolkit.genome.b37_gap_bed" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">finaletoolkit.genome.</span></span><span class="sig-name descname"><span class="pre">b37_gap_bed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">output_file</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">PathLike</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#finaletoolkit.genome.b37_gap_bed" title="Permalink to this definition">#</a></dt>
 <dd><p>Creates BED4 of centromeres, telomeres, and short arms for the Broad
 Institute GRCh37 (b37) reference sequence. Also useful for
 files aligned to human_g1k_v37 (1000 Genomes Project).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>output_file</strong> (<em>str</em>) – Output path</p>
+<dd class="field-odd"><p><strong>output_file</strong> (<em>str</em><em> or </em><em>path</em>) – Output path</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="finaletoolkit.genome.ucsc_hg38_gap_bed">
-<span class="sig-prename descclassname"><span class="pre">finaletoolkit.genome.</span></span><span class="sig-name descname"><span class="pre">ucsc_hg38_gap_bed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">output_file</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#finaletoolkit.genome.ucsc_hg38_gap_bed" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">finaletoolkit.genome.</span></span><span class="sig-name descname"><span class="pre">ucsc_hg38_gap_bed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">output_file</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">PathLike</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#finaletoolkit.genome.ucsc_hg38_gap_bed" title="Permalink to this definition">#</a></dt>
 <dd><p>Creates BED4 of centromeres, telomeres, and short arms for the UCSC
 hg38 reference sequence.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>output_file</strong> (<em>str</em>) – Output path</p>
+<dd class="field-odd"><p><strong>output_file</strong> (<em>str</em><em> or </em><em>path</em>) – Output path</p>
 </dd>
 </dl>
 </dd></dl>

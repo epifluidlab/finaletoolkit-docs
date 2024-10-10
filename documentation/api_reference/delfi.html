@@ -396,13 +396,18 @@ chromosomes</p></li>
 <li><p><strong>bins_file</strong> (<em>str</em>) – Path string to a BED file containing 100kb bins for reference
 genome of choice.</p></li>
 <li><p><strong>reference_file</strong> (<em>str</em>) – Path string to .2bit file for reference genoe.</p></li>
+<li><p><strong>gap_file</strong> (<em>str</em><em> or </em><a class="reference internal" href="genomeutils.html#finaletoolkit.genome.GenomeGaps" title="finaletoolkit.genome.GenomeGaps"><em>GenomeGaps</em></a>) – Specifies locations of telomeres and centromeres for reference
+genome. There are three options:
+- Path string to a BED4+ file where each interval is a
+centromere or telomere. A bed file can be used <strong>only if</strong> the
+fourth field for each entry corresponding to a telomere or
+centromere is labled “telomere” or “centromere, respectively.
+- String naming reference genome used. Options are “b37”,
+“hg19”, “hg38”, and “GRCh38”.
+- Alternatively, a finaletoolkit.genome.GenomeGaps with gap
+info associated with the reference genome of choice may be
+used.</p></li>
 <li><p><strong>blacklist_file</strong> (<em>str</em>) – Path string to BED file containing genome blacklist regions.</p></li>
-<li><p><strong>gap_file</strong> (<em>str</em><em> or </em><a class="reference internal" href="genomeutils.html#finaletoolkit.genome.GenomeGaps" title="finaletoolkit.genome.GenomeGaps"><em>GenomeGaps</em></a>) – Path string to a BED4+ file where each interval is a centromere
-or telomere. A bed file can be used <strong>only if</strong> the fourth field
-for each entry corresponding to a telomere or centromere is
-labled “telomere” or “centromere, respectively. Alternatively, a
-finaletoolkit.genome.GenomeGaps with gap info associated with
-the reference genome of choice may be used.</p></li>
 <li><p><strong>output_file</strong> (<em>str</em><em>, </em><em>optional</em>) – Path to output tsv.</p></li>
 <li><p><strong>gc_correct</strong> (<em>bool</em>) – Perform gc-correction. Default is True.</p></li>
 <li><p><strong>remove_nocov</strong> (<em>bool</em>) – Remove two windows described by Cristiano et al (2019) as low
